@@ -1,19 +1,25 @@
-<meta charset= "UTF-8">
+<!-- (Aula: Lógica de Programação I) Primeiros conceitos de HTML / JS -->
 
-<Script>
+<html lang="pt-br">
+    <meta charset= "UTF-8">
+</html>
+
+<script>
+
+//Declarando Funções.
 
     function pulaLinha() {
 
         document.write("<br>");
     }
 
-    function mostraDoc (imprime) {
+    function imprime (frase) {
 
-        document.write(imprime);
+        document.write(frase);
         pulaLinha();
     }
 
-    document.write("Nesse codigo tem uma função que faz pular uma linha.");
+    document.write("Nesse código tem uma função que faz pular uma linha.");
     pulaLinha();
     document.write("Pulou uma linha?");
     pulaLinha();
@@ -22,10 +28,10 @@
     pulaLinha();
     document.write("Uma função pode ser um atalho para outros comandos, podemos colocar muitos comandos dentro de uma função.")
 
-//Apartir desse ponto o codigo esta ainda mais resumido, com uma função puxando outra.
+//A partir desse ponto o código está ainda mais resumido, com uma função puxando outra.
 
-    mostraDoc ("Esta imprimindo uma frase de dentro de uma função.");
-    mostraDoc ("Além de imprimir uma frase ele também chama a função pulaLinha.")
-    mostraDoc ("Gostou?")
+    imprime ("Esta imprimindo uma frase de dentro de uma função.");
+    imprime ("Além de imprimir uma frase ele também chama a função pulaLinha.")
+    imprime ("Gostou?")
 
-</Script>
+</script>

@@ -1,9 +1,16 @@
-<meta charset="utf-8"> 
+<!-- (Aula: Lógica de Programação I) Primeiros conceitos de HTML / JS -->
+
+<html lang="pt-br">
+    <meta charset="UTF-8">
+</html>
+
 <script>
 
-//Imprima esse número da seguinte maneira: 
-//calcule quantos anos passaram desde 1500 
-//e divida o resultado pela média de 28 anos.
+/*
+
+Imprima esse número da seguinte maneira: calcule quantos anos passaram desde 1500 e divida o resultado pela média de 28 anos.
+
+*/
 
     function pulaLinha() {
 
@@ -11,9 +18,9 @@
         document.write("<br>");
     }
 
-    function imprime(mensagem) {
+    function imprime(frase) {
 
-        document.write(mensagem);
+        document.write(frase);
         pulaLinha();
     }
 
@@ -21,6 +28,6 @@
     var media28 = anosPassados/28;
 
     imprime("De 1500 até 2020 se passou " + anosPassados + " anos.");
-    imprime("De 1500 ate 2020 teve uma media de " + Math.round(media28) + " gerações.");
+    imprime("De 1500 até 2020 teve uma média de " + Math.round(media28) + " gerações.");
 
 </script>

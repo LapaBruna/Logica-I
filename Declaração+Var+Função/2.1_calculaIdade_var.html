@@ -1,7 +1,12 @@
-<meta charset="UTF-8">
+<!-- (Aula: Lógica de Programação I) Primeiros conceitos de HTML / JS -->
+
+<html lang="pt-br">
+    <meta charset="UTF-8">
+</html>
 
 <script>
-//calculo do ano de nascimento de Bruna Lapa Valgas.
+
+//cálculo do ano de nascimento de Bruna Lapa Valgas.
 
     document.write ("O ano atual é 2020 e Bruna tem 31 anos de idade. <br>");
     document.write ("A Bruna nasceu em " + (2020 - 31) + "<br>");
@@ -9,14 +14,14 @@
 
 //Agora vamos calcular a idade da Bruna da Arlene do Rafael e da Paula usando VAR.
 
-var ano = 2020;
+    var ano = 2020;
 
     document.write("O Rafael tem: " + (ano - 1988) + " de idade <br>");
     document.write("A Arlene tem: " + (ano - 1968) + " de idade <br>");
     document.write("A Paula tem: " + (ano - 1991) + " de idade <br>");
     document.write("A Bruna tem: " + (ano - 1989) + " de idade <br>");
 
-//Agora vamos somar as idades e tirar a media, vamos aplicar Math.round para arredondar o resultado.
+//Agora vamos somar as idades e tirar a média, vamos aplicar Math.round para arredondar o resultado.
 
     var idades = 31+32+29+52;
 
@@ -27,7 +32,7 @@ var ano = 2020;
 
     var media = idades/4;
 
-    document.write("A media de idades é: " + Math.round(media) + "<br>");
+    document.write("A média de idades é: " + Math.round(media) + "<br>");
 
 //Criando VAR para cada idade individualmente.
 
@@ -40,7 +45,6 @@ var ano = 2020;
 
     document.write("<br> A idade de Bruna " + idadeBruna + " + a idade de Rafael " + idadeRafael);
     document.write(" + a idade de Arlene " + idadeArlene + " + a idade de Paula " + idadePaula + " é: " + idades + "<br>");
-    document.write("E a media dessa idades é: " + Math.round(media));
-
+    document.write("E a média das idades é: " + Math.round(media));
 
 </script>
