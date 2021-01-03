@@ -1,0 +1,31 @@
+<meta charset= "UTF-8">
+
+<Script>
+
+    function pulaLinha() {
+
+        document.write("<br>");
+    }
+
+    function mostraDoc (imprime) {
+
+        document.write(imprime);
+        pulaLinha();
+    }
+
+    document.write("Nesse codigo tem uma função que faz pular uma linha.");
+    pulaLinha();
+    document.write("Pulou uma linha?");
+    pulaLinha();
+    pulaLinha();
+    document.write("Sim pulou uma linha, depois pulou duas linhas.");
+    pulaLinha();
+    document.write("Uma função pode ser um atalho para outros comandos, podemos colocar muitos comandos dentro de uma função.")
+
+//Apartir desse ponto o codigo esta ainda mais resumido, com uma função puxando outra.
+
+    mostraDoc ("Esta imprimindo uma frase de dentro de uma função.");
+    mostraDoc ("Além de imprimir uma frase ele também chama a função pulaLinha.")
+    mostraDoc ("Gostou?")
+
+</Script>

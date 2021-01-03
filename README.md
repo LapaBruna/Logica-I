@@ -1,5 +1,5 @@
 # Primeiros_Passos_html-js
 
- Cinco páginas com: O conhecimento mínimo de HTML-JS para seguir o curso de Lógica I da Alura.
+ Folders com o progresso do curso de Lógica I: 
  
- Utilizando esse material para treinar o processo de enviar para o Git-Github.
+ Contem o conhecimento mínimo de HTML-JS para seguir o curso de Lógica I da Alura. Utilizando esse material para treinar o processo de enviar os arquivos para o Git-Github.

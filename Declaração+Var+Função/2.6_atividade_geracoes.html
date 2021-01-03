@@ -1,0 +1,26 @@
+<meta charset="utf-8"> 
+<script>
+
+//Imprima esse número da seguinte maneira: 
+//calcule quantos anos passaram desde 1500 
+//e divida o resultado pela média de 28 anos.
+
+    function pulaLinha() {
+
+        document.write("<br>");
+        document.write("<br>");
+    }
+
+    function imprime(mensagem) {
+
+        document.write(mensagem);
+        pulaLinha();
+    }
+
+    var anosPassados = 2020 - 1500;
+    var media28 = anosPassados/28;
+
+    imprime("De 1500 até 2020 se passou " + anosPassados + " anos.");
+    imprime("De 1500 ate 2020 teve uma media de " + Math.round(media28) + " gerações.");
+
+</script>
