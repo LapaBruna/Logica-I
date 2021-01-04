@@ -1,0 +1,62 @@
+<!-- (Aula: Lógica de Programação I) Primeiros conceitos de HTML / JS -->
+
+<html lang="pt-br">
+    <meta charset="UTF-8">
+</html>
+
+<script>
+    function pulaLinha() {
+
+        document.write("<br>");
+    }
+
+    function imprime(frase) {
+
+        document.write(frase);
+        pulaLinha();
+    }
+
+    alert("Hoje vamos imprimir números, mas não gostamos do 33 e do 37");
+    imprime("Do 30 ao 40.");      
+    pulaLinha();
+
+    var cont = 30;
+    var numero = 30;
+
+    while(cont <= 40) {
+
+        if (numero != 33 && numero !=  37) {
+            
+            imprime("Número " + numero);
+            
+            numero = numero + 1;
+            cont = cont + 1;
+            
+        } else {
+                
+            numero = numero + 1;
+            cont = cont + 1;
+        }
+    }
+
+    imprime("Ufa, chegamos ao FIM.");
+    pulaLinha()
+
+    //Segundo programa para imprimir número
+
+    alert("Também vamos imprimir de forma decrescente a partir do 20.");
+    imprime("Decrescente 20.");
+    pulaLinha();
+    
+    var numero20 = 20;
+
+    while (numero20 != -1) {
+        
+        imprime("Número " + numero20);
+        numero20 = numero20 -1;
+    }
+    
+    imprime("Ufa, chegamos ao FIM.");
+    pulaLinha();
+
+</script>

@@ -1,0 +1,33 @@
+<!-- (Aula: Lógica de Programação I) Primeiros conceitos de HTML / JS -->
+
+<html lang="pt-br">
+    <meta charset="UTF-8">
+</html>
+
+<script>
+    function pulaLinha() {
+
+        document.write("<br>");
+    }
+
+    function imprime(frase) {
+
+        document.write(frase);
+        pulaLinha();
+    }
+
+    var anoCopa = 1930;
+    var dataLimite = parseInt(prompt("Informe a data."));
+    var soma = 0;
+
+    while (anoCopa <= dataLimite) {
+
+        imprime("Teve copa em " + anoCopa);
+        
+        anoCopa = anoCopa + 4;
+        soma = soma + 1;
+    }
+
+    imprime("Teve " + soma + " copas até a data informada.");
+    
+</script>

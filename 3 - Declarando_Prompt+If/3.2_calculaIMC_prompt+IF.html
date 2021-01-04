@@ -1,0 +1,49 @@
+<!-- (Aula: Lógica de Programação I) Primeiros conceitos de HTML / JS -->
+
+<html lang="pt-br">
+    <meta charset="UTF-8">
+</html>
+
+<script>
+    function pulaLinha() {
+       
+        document.write("<br>");
+        document.write("<br>");
+    }
+
+    function imprime(frase) {
+        
+        document.write(frase);
+        pulaLinha();
+    }
+
+    function calculaImc(peso, altura) {
+
+        var calculoImc = peso / (altura*altura);
+        return calculoImc;
+    }
+
+    var nomeInformado = prompt("Digite seu nome.");
+    var pesoInformado = prompt(nomeInformado + ", digite seu peso.");
+    var alturaInformado = prompt(nomeInformado + ", digite sua altura.");
+    
+    var imc = calculaImc(pesoInformado, alturaInformado);
+
+    imprime(nomeInformado + " o seu IMC é: " + Math.round(imc));    
+
+    if(imc < 18.5) {
+
+        imprime(nomeInformado + " o seu IMC esta abaixo do recomendado.");
+    }
+
+    if(imc > 35) {
+
+        imprime(nomeInformado + " o seu IMC esta acima do recomendado.");
+    }
+
+    if(imc >= 18.5 && imc <= 35) {
+            
+        imprime(nomeInformado + " o seu IMC esta na média recomendada.");
+    }
+
+</script>

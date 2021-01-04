@@ -1,0 +1,38 @@
+<!-- (Aula: Lógica de Programação I) Primeiros conceitos de HTML / JS -->
+
+<html lang="pt-br">
+    <meta charset="UTF-8">
+</html>
+
+<script>
+    function pulaLinha() {
+
+        document.write("<br>");
+    }
+
+    function imprime(frase) {
+
+        document.write(frase);
+        pulaLinha();
+    }
+
+    alert("Está preparado para descobrir os números pares?");
+    
+    var ultimoNumero = parseInt(prompt("Digite um número qualquer."));
+    var numeroPar = 0;
+    var cont = 0;
+    var soma = 0;
+
+    while(cont <= ultimoNumero) {
+
+        imprime("Número par " + numeroPar);
+        
+        numeroPar = numeroPar + 2;
+        soma = soma + 1;
+        cont = cont + 2;
+    }
+
+    imprime("Tem " + soma + " números pares entre 0 e " + ultimoNumero);
+    imprime("Ufa, chegamos ao FIM.");
+
+</script>

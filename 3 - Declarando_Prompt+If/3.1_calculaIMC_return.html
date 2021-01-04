@@ -1,0 +1,42 @@
+
+<!-- (Aula: Lógica de Programação I) Primeiros conceitos de HTML / JS -->
+
+<html lang="pt-br">
+    <meta charset="UTF-8">
+</html>
+<!--Esse programa vai calcular o IMC de alguém-->
+
+<script>
+    function pularLinha() {
+
+        document.write("<br>");
+        document.write("<br>");
+    }
+
+    function mostra (frase) {
+
+        document.write(frase);
+        document.write("<br>");
+    }
+
+    function calcularImc (peso, altura) {
+
+        var imc = peso / (altura*altura);
+        return imc;
+    }
+
+    var pesoBruna = 69;
+    var alturaBruna = 1.74;
+
+    var pesoMarlene = 79;
+    var alturaMarlene = 1.69;
+
+    var imcBruna = calcularImc(pesoBruna, alturaBruna);
+    var imcArlene = calcularImc(pesoMarlene, alturaMarlene);
+    var somaImc = imcBruna + imcMarlene;
+
+    mostra("O IMC da Bruna é: " +  Math.round(imcBruna));
+    mostra("O IMC da Arlene é: " +  Math.round(imcMarlene));
+    mostra("A soma dos IMCs é: " + Math.round(somaImc));
+
+</script>

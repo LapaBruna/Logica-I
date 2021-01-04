@@ -1,0 +1,56 @@
+<!-- (Aula: Lógica de Programação I) Primeiros conceitos de HTML / JS -->
+
+<html lang="pt-br">
+    <meta charset="UTF-8">
+</html>
+
+<script>
+    function pulaLinha() {
+
+        document.write("<br>");
+    }
+
+    function imprime(frase) {
+
+        document.write(frase);
+        pulaLinha();
+    }
+
+    var tabuada = 2;
+    var multiplicador = 1;
+    var contTabuada = 0; 
+
+    alert("Vou imprimir a tabuada de 2, depois uma de sua escolha.")
+    
+    for (var contador = 1; contador <=10; contador++) {
+
+        imprime(tabuada + " multiplicado por " + multiplicador + ": " + tabuada * multiplicador); 
+        multiplicador++;
+
+        if (multiplicador == 11) {
+            
+            tabuada++;
+            multiplicador = 1;
+            contTabuada ++;
+        }
+    }
+
+    imprime("Fim da tabuada. Vimos " + contTabuada + " tabuadas.");
+    pulaLinha();    
+
+    imprime("Sua vez.");
+    
+    var suaTabuada = parseInt(prompt("Digite a tabuada que você quer imprimir na tela."));
+    var seuMultiplicador = 1;
+
+    while (seuMultiplicador <=10) {
+        
+        imprime (suaTabuada +" multiplicado por "+ seuMultiplicador + ": " + suaTabuada * seuMultiplicador); 
+        
+        seuMultiplicador ++;
+    }
+
+    pulaLinha();    
+    imprime("A sua tabuada é a de " + suaTabuada);
+    
+</script>

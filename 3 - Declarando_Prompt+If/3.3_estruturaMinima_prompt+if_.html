@@ -1,0 +1,52 @@
+
+<!-- (Aula: Lógica de Programação I) Primeiros conceitos de HTML / JS -->
+
+<html lang="pt-br">
+    <meta charset="UTF-8">
+</html>
+
+<!-- O prompt retorna somente String, então usamos o "parseInt" para converter o valor-->
+
+<script>
+
+    function pularLinha() {
+
+        document.write("<br>");
+        document.write("<br>");
+    }
+
+    function imprime(frase) {
+
+        document.write(frase);
+        pularLinha ();
+    }
+
+//Aqui não utilizamos o parseInt.
+
+    var nomeTime = prompt("Digite o nome do seu time");
+
+//Aqui utilizamos o parseInt.
+
+    var vitorias = parseInt(prompt("Digite o número de vitórias do seu time."));
+    var empates = parseInt(prompt("Digite o número de empates do seu time."));
+
+    var totalPontos = (vitorias*3) + empates;
+
+    imprime ("O total de pontos do " + nomeTime + " é: " + totalPontos);
+    
+//Estrutura IF: Condição para executar uma das frases.
+
+    if (totalPontos > 28) {
+
+        imprime (nomeTime + " o seu time está melhor do que no ano passado.");
+    }
+    if (totalPontos < 28) {
+
+        imprime (nomeTime + " o seu time está pior do que no ano passado.");
+    }
+    if (totalPontos == 28) {
+
+        imprime (nomeTime + " o seu time está igual igual ao ano passado.");
+    }   
+
+</script>

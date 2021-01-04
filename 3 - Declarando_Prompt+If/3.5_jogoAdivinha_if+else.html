@@ -1,0 +1,53 @@
+<!-- (Aula: Lógica de Programação I) Primeiros conceitos de HTML / JS -->
+
+<html lang="pt-br">
+    <meta charset="UTF-8">
+</html>
+
+<script>
+    function pulaLinha() {
+
+        document.write("<br>");
+    }
+
+    function imprime(frase) {
+
+        document.write(frase);
+        pulaLinha();
+    }
+
+    function sorteiaNumero() {
+
+        var n = Math.round(Math.random() * 100);
+        return n;
+    }
+    
+    /* ~~ Outra forma de fazer a função SORTEIA NÚMERO. ~~
+    
+        function sorteia(n) { 
+            return Math.round(Math.random() * n);
+      }  
+    
+      */ 
+
+    alert("Adivinhar o número sorteado pela máquina.")
+
+    var numeroPensado = sorteiaNumero();
+    var chute = parseInt(prompt("Já pensei. Qual você acha que é?"));
+
+    if(chute == numeroPensado) {
+
+        imprime("Uau! Você acertou, pois eu pensei no " + numeroPensado);
+    
+    } else if (chute > numeroPensado) {
+            
+            imprime("Você errou! Eu tinha pensado no " + numeroPensado);
+            imprime("O seu número é " + chute + " que é maior que o meu número " + numeroPensado);
+    
+    } else {
+
+            imprime("Você errou! Eu tinha pensado no " + numeroPensado);
+            imprime("O seu número é " + chute + " que é menor que o meu número " + numeroPensado);
+    }
+
+</script>

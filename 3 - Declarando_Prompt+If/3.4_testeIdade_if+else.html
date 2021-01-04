@@ -1,0 +1,49 @@
+<!-- (Aula: Lógica de Programação I) Primeiros conceitos de HTML / JS -->
+
+<html lang="pt-br">
+    <meta charset="UTF-8">
+</html>
+
+<script>
+    function pulaLinha() {
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+
+    var idade = parseInt(prompt("Qual é sua idade?"));
+    var temCarteira = prompt("Tem carteira? Responda S ou N"); 
+
+    if (idade >=18 && temCarteira == "s") {
+
+        mostra("Você é maior de idade e tem carteira de motorista.");
+        mostra("Você pode dirigir.");
+
+    } else if (idade >=18 && temCarteira == "n") {
+            
+            mostra("Você é maior de idade e não tem carteira de motorista.");
+            mostra ("Você não pode dirigir");
+
+    } else {
+
+        mostra("Você é menor de idade e não pode dirigir");
+    }
+
+/* ~~ Outra solução ~~ 
+
+    if (idade >=18 && temCarteira == "s") {
+
+        mostra("Você é maior de idade e tem carteira de motorista. ");
+        mostra("Você pode dirigir.");
+        mostra("Dirija com cuidado.");
+
+    } else {
+             
+        mostra("Você é menor de idade ou não possui carteira de motorista.");
+    }
+*/
+
+</script>
