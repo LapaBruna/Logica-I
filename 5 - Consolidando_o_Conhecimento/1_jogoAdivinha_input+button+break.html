@@ -1,0 +1,118 @@
+<!-- (Aula: Lógica de Programação I) Primeiros conceitos de HTML / JS -->
+
+<html lang="pt-br">
+    <meta charset="UTF-8">
+</html>
+
+<!-- Vamos ver uma outra forma de interagir com o usuário
+utilizaremos a integração entre o INPUT o BUTTON do HTML e o SCRIPT 
+vai receber essas informações.-->
+
+    <h2> Jogo Adivinha </h2>
+    <p> Você deve <b>Submeter</b> um número para comparar com o que eu pensei.</p>
+    
+    <br>
+    <br>
+
+<!--INPUT caixa para usuário escrever.-->
+
+    <input/>
+
+<!--BUTTON, um botão para o usuário entrar a informação.-->   
+
+    <button> Submeter </button>
+
+<script>
+
+//Função para gerar número aleatório.
+        
+    function gerarNumeros() {
+
+        return (Math.round(Math.random()*10));
+    }
+
+    function gerarSegredos (quantidade) {
+
+        var segredos = [];
+        var contSegredo = 1;
+
+        while (contSegredo <=quantidade ) {
+
+            var confirmaNumero = gerarNumeros();
+
+            //IF se o número não for ZERO pode executar, se for ZERO não pode.
+            
+            if (gerarNumeros !=0) { 
+
+                var achou = false;
+
+                for (posicao =0; posicao < segredos.length; posicao++) {
+
+                    if (segredos [posicao] == confirmaNumero) {
+                    
+                        //IF se o número sorteado for igual ao número já confirmado, ele altera a 
+                        //VAR ACHOU não permitindo a execução do proximo IF.
+                        
+                        achou == true;
+                        break;
+                    }
+                }
+            
+                //IF var ACHOU == false só executado se o número sorteado não é repetido.
+                
+                if (achou == false) {
+                
+                    //.push empurra resultado gerado pela função gerarNumero para dentro do array segredos.
+                    
+                    segredos.push(confirmaNumero);   
+                    contSegredo ++; 
+                }
+            }
+        }
+        
+        return segredos;
+    
+    }
+
+    var segredos = gerarSegredos(5); //SEGREDOS é um vetor / array.   
+
+// console.log permite ver o número  dentro do array no console do navegador. ***console.log(segredos);****  
+//querySelector seleciona um elemento do HTML e permite o SCRIPT a manipulá-lo.
+    
+    var input = document.querySelector("input");
+    
+    input.focus();
+
+    function verifica () {
+          
+        var errou = false;
+
+        //LENGTH pega o tamanho do vetor/array SEGREDOS.
+        
+        for (var cont =0; cont < segredos.length; cont++) {
+               
+            if(input.value == segredos[cont]) {
+
+                alert ("Parabéns você ACERTOU o número  pensado é " + segredos[cont] + ".");
+                errou = true;
+                break;
+            } 
+        }
+        //IF do ERROU tem que ficar dentro da FUNÇÃO pois o botão que chama essa resposta.
+        
+        if (errou == false) {
+                    
+            alert("Que pena você ERROU. Tente novamente.");
+            input.value = "";
+            input.focus();
+            
+        } 
+    }
+
+//document tem varias funcionalidades, como .write (escreve em HTML) ou .querySelector (pega elementos do HTML).
+    
+    var button = document.querySelector ("button");
+    button.onclick = verifica;
+    input.focus();
+
+</script>
